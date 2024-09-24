@@ -1,0 +1,11 @@
+<h1>Create a New Room</h1>
+
+<%= form_with model: @room, local: true do |form| %>
+  <div>
+    <%= form.label :name, "Room Name" %>
+    <%= form.text_field :name %>
+  </div>
+  <div>
+    <%= form.submit "Create Room" %>
+  </div>
+<% end %>

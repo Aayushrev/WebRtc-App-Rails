@@ -88,9 +88,18 @@ GEM
     debug (1.9.2)
       irb (~> 1.10)
       reline (>= 0.3.8)
+    em-hiredis (0.3.1)
+      eventmachine (~> 1.0)
+      hiredis (~> 0.6.0)
+    em-websocket (0.5.3)
+      eventmachine (>= 0.12.9)
+      http_parser.rb (~> 0)
     erubi (1.13.0)
+    eventmachine (1.2.7)
     globalid (1.2.1)
       activesupport (>= 6.1)
+    hiredis (0.6.3)
+    http_parser.rb (0.8.0)
     i18n (1.14.6)
       concurrent-ruby (~> 1.0)
     importmap-rails (2.0.1)
@@ -171,6 +180,7 @@ GEM
     rake (13.2.1)
     rdoc (6.7.0)
       psych (>= 4.0.0)
+    redis (4.8.1)
     regexp_parser (2.9.2)
     reline (0.5.10)
       io-console (~> 0.5)
@@ -207,6 +217,10 @@ GEM
       activemodel (>= 6.0.0)
       bindex (>= 0.4.0)
       railties (>= 6.0.0)
+    webrtc-rails (0.3.14)
+      em-hiredis
+      em-websocket
+      redis
     websocket (1.2.11)
     websocket-driver (0.7.6)
       websocket-extensions (>= 0.1.0)
@@ -226,6 +240,7 @@ DEPENDENCIES
   jbuilder
   puma (~> 5.0)
   rails (~> 7.0.8, >= 7.0.8.4)
+  redis (~> 4.0)
   selenium-webdriver
   sprockets-rails
   sqlite3 (~> 1.4)
@@ -233,6 +248,7 @@ DEPENDENCIES
   turbo-rails
   tzinfo-data
   web-console
+  webrtc-rails
 
 RUBY VERSION
    ruby 3.3.0p0
